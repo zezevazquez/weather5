@@ -1,8 +1,6 @@
-require('dotenv');
-
 import axios from 'axios';
+import { API_KEY } from '../private';
 
-const API_KEY = process.env.API_KEY;
 const ROOT_URL = `http://api.openweathermap.org/data/2.5/forecast?appid=${API_KEY}`;
 
 // this constant avoids future bugs with reducers if the
