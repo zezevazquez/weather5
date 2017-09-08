@@ -1,0 +1,39 @@
+{
+	"name": "weather5",
+	"version": "1.0.0",
+	"description": "Weather app that shows 5-day trend for any city in the US!",
+	"main": "index.js",
+	"scripts": {
+		"start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+		"prettier": "prettier --write --single-quote --print-width=120 --parse=flow --tab-width=2 \"js//**/*.{js,jsx}\""
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zezevazquez/weather5.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/zezevazquez/weather5/issues"
+	},
+	"homepage": "https://github.com/zezevazquez/weather5#readme",
+	"dependencies": {
+		"axios": "^0.16.2",
+		"lodash": "^4.17.4",
+		"react": "^15.6.1",
+		"react-dom": "^15.6.1",
+		"react-redux": "^5.0.6",
+		"redux": "^3.7.2",
+		"redux-promise": "^0.5.3"
+	},
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-loader": "^7.1.2",
+		"babel-preset-es2015": "^6.24.1",
+		"babel-preset-react": "^6.24.1",
+		"prettier": "^1.6.1",
+		"webpack": "^3.5.6",
+		"webpack-dev-server": "^2.7.1"
+	}
+}
