@@ -5,7 +5,8 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-		"prettier": "prettier --write --single-quote --print-width=120 --parse=flow --tab-width=2 \"js//**/*.{js,jsx}\""
+		"prettier":
+			"prettier --write --single-quote --print-width=120 --parse=flow --tab-width=2 \"js//**/*.{js,jsx}\""
 	},
 	"repository": {
 		"type": "git",
