@@ -4,7 +4,7 @@
 	"description": "Weather app that shows 5-day trend for any city in the US!",
 	"main": "index.js",
 	"scripts": {
-		"start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+		"start": "webpack-dev-server --port 5000",
 		"prettier":
 			"prettier --write --single-quote --print-width=120 --parse=flow --tab-width=2 \"js//**/*.{js,jsx}\""
 	},

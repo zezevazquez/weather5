@@ -10,6 +10,7 @@ class WeatherList extends Component {
 		const pressures = cityData.list.map(weather => weather.main.pressure);
 		const humidities = cityData.list.map(weather => weather.main.humidity);
 		const { lat, lon } = cityData.city.coord;
+		const farenheit = convertToFarenheit(temps)
 
 		return (
 			<tr key={cityName}>
@@ -17,10 +18,10 @@ class WeatherList extends Component {
 					<GoogleMap lon={lon} lat={lat} />
 				</td>
 				<td>
-					<Chart data={temps} color="peru" units="K" />
+					<Chart data={farenheit} color="peru" units="°F" />
 				</td>
 				<td>
-					<Chart data={temps} color="red" units="hPa" />
+					<Chart data={pressures} color="red" units="hPa" />
 				</td>
 				<td>
 					<Chart data={pressures} color="limegreen" units="%" />
@@ -34,7 +35,7 @@ class WeatherList extends Component {
 				<thead>
 					<tr>
 						<th>City</th>
-						<th>Temperature (K)</th>
+						<th>Temperature (°F)</th>
 						<th>Pressure (hPa)</th>
 						<th>Humidity (%)</th>
 					</tr>
@@ -43,6 +44,13 @@ class WeatherList extends Component {
 			</table>
 		);
 	}
+}
+
+const convertToFarenheit = (dataList) => {
+	return dataList.map(data => {
+		return data * (9/5) - 459.67
+		console.log(data)
+	})
 }
 
 const mapStateToProps = ({ weather }) => {
