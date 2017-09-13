@@ -47,10 +47,7 @@ class WeatherList extends Component {
 }
 
 const convertToFarenheit = (dataList) => {
-	return dataList.map(data => {
-		return data * (9/5) - 459.67
-		console.log(data)
-	})
+	return dataList.map(data => (data * (9/5) - 459.67))
 }
 
 const mapStateToProps = ({ weather }) => {
