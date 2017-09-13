@@ -11,6 +11,7 @@ class WeatherList extends Component {
 		const humidities = cityData.list.map(weather => weather.main.humidity);
 		const { lat, lon } = cityData.city.coord;
 		const farenheit = convertToFarenheit(temps)
+		console.log(cityData.list)
 
 		return (
 			<tr key={cityName}>
@@ -24,7 +25,7 @@ class WeatherList extends Component {
 					<Chart data={pressures} color="red" units="hPa" />
 				</td>
 				<td>
-					<Chart data={pressures} color="limegreen" units="%" />
+					<Chart data={humidities} color="limegreen" units="%" />
 				</td>
 			</tr>
 		);
